@@ -1,0 +1,65 @@
+digital system - interconnection -digital hardware modules 
+modules - registers , decoders , arithmetic elements , control logic 
+various modules are - interconnected - common data , contol paths - to form digital computer system 
+digital modules are defined by the registers they contain and the operations that are performed on the data stored in them
+operations executed on data stored in registers is called microopertations
+micropertions is an elementary operation performed on the information stored in one or kore registers 
+
+REGISTER TRANSFER LANGUAGE -
+symbolic notation used to describe the micr operation among the register is RTL
+
+use of symbol instead of notaions explanation provides organized and good manner foe listing the sequences of ther registers 
+and control function initiates them
+
+   REGISTERS
+computer registers are designed by upper case letters to denote the function of the register followed by digits or letters if needed 
+
+every register holds a address for the memory unit called MAR
+
+other disignation registers are PC , IR , R1 (for processor unit)
+
+   REGISTER TRANSFER
+information tranfer from one register to another register in symbolic form by a means of a replacement operator 
+
+the statement R2 <-R1 denotes content of register R1 is transferred to R2
+
+predefined control statement    if(P=1) then R2<-R1
+
+we can separate the control variables with register transfer operation by control function 
+
+  3- STATE BUFFER
+has 3 states -  Logic 0 = low signals
+                Logic 1 = high signals
+                High- Impedence = open circuit 
+Normal input - where the signal to be sent to wat output is applied
+Control input - determines whether the buffer`s output is active or high impedence 
+Ex-
+Suppose they are 4 buffers , decoder will select signal control by saying which buffer is active so if i want to send data from buffer 2 then only buffer 2 is enabled while other are kept in high impedence
+
+  MEMORY TRANSFER
+Read operation - when u get to read the existing data from the memory and use it to send it to a register or processor
+Write operation - when u add a new data into the memory 
+
+when u r reading or writing we should know which memory address are v specifying to - so memory address is important 
+
+registers are small storage areas-
+Address Regiester(AR)- holds the address of the memory word u want to read or write
+Data Register(DR)- temporarily holds the data that u r reading from or writng it 
+
+DR <-M[AR] means ..the data stored in the address of AR put in into DR for Reading.
+M[AR] -> R1 means .. the data stored in R1 sud be stored in the address of AR for Writing.
+
+ ARITHEMETIC MICRO OPERATIONS
+~Addition - adding two numbers
+~Subtraction - Subtracting one no. from another no.
+~Increment - Adding one no. by one
+~Decrement - Subtractiong one no. by one
+~Shift - move bits left or right
+
+Implenting micro operators-
+Full Adder - Adds two bits and carry a bit like normal addition add and carry
+Binary Adder - Combines all the full adders for larger addition of binary numbers
+
+Binary Adder and Subtractor - Uses -OR(XOR) gate to control addition or subtracting
+  - if mode input M is 0 then circuit acts as adder 
+  - if mode input M is 1 then circuit acts as subtractor by complementing one of the inputs  
